@@ -2,7 +2,16 @@ import Link from 'next/link';
 import Layout from '../components/MyLayout';
 function About(props) {
   return <div>
-    <Layout>
+    <div className="container">
+      <Layout />
+      <ul className="breadcrumb">
+        <li className="breadcrumb-item">
+          <Link href="/">Home</Link>
+        </li>
+        <li className="breadcrumb-item">
+          <Link href="/about">About</Link>
+        </li>
+      </ul>
       <h1>Fetch Data from API</h1>
       {
         props.data.map((data, i) => (
@@ -13,7 +22,7 @@ function About(props) {
           </div>
         ))
       }
-    </Layout>
+    </div>
 
   </div>
 }
